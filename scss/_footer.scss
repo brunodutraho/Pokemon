@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    background-color: #3F5DB3;
+    padding-top: 6.7rem;
+    padding-bottom: 6.5rem;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text {
+            h3 {
+                color: #FFFFFF;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 180%;
+            }
+        }
+    }
+}

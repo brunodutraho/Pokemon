@@ -1,0 +1,562 @@
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 24.4rem;
+    max-width: 12.1rem;
+    padding: 6px 4px;
+
+    &.blue-tag {
+
+        .icon {
+            background: rgba(63, 104, 186, 0.15);
+        }
+
+        span {
+            color: #3F67BA;
+        }
+    }
+
+    .icon {
+        width: 2.6rem;
+        height: 2.6rem;
+        flex-shrink: 0;
+        border-radius: 24.4rem;
+        background: rgba(194, 0, 0, 0.2);
+        @include centerToralFlex;
+        margin-right: 0.8rem;
+
+        img {
+            z-index: 1;
+        }
+    }
+
+    span {
+        color: #C20001;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 150%;
+    }
+}
+
+.search {
+    width: 100%;
+    max-width: 40.3rem;
+    height: 5.6rem;
+    flex-shrink: 0;
+    border-radius: 12.2rem;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 0.7rem;
+
+    input[type=text] {
+        border: 0;
+        outline: none;
+        width: 80%;
+        color: #A0AFBA;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 150%;
+
+        &::placeholder {
+            color: #A0AFBA;
+        }
+    }
+
+    button {
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 122px;
+        border: 1px solid transparent;
+        background: rgba(158, 185, 225, 0.1);
+        @include centerToralFlex;
+        z-index: 0;
+        transition: border-color .3s;
+
+        &:hover {
+            border-color: #3E75C3;
+        }
+
+        img {
+            width: 1.6rem;
+            height: 1.61rem;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.type-filter {
+    display: flex;
+    align-items: center;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all .3s;
+
+    &:hover {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+
+    .icon {
+        width: 2.8rem;
+        height: 2.8rem;
+        @include centerToralFlex;
+        margin-right: 0.5rem;
+    }
+
+    span {
+        color: #ACB9C1;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &.ghost {
+        span {
+
+            color: #616EB7;
+        }
+    }
+
+    &.bug {
+        span {
+            color: #9BBA48;
+        }
+
+    }
+
+    &.dark {
+        span {
+            color: #595761;
+        }
+    }
+
+    &.drogon {
+        span {
+            color: #2C6AC1;
+        }
+    }
+
+    &.eletric {
+        span {
+            color: #D4BC34;
+        }
+    }
+
+    &.fairy {
+        span {
+            color: #E296E1;
+        }
+    }
+
+    &.fighting {
+        span {
+            color: #C44D61;
+        }
+    }
+
+    &.ground {
+        span {
+            color: #CE8056;
+        }
+    }
+
+    &.ice {
+        span {
+            color: #71BAAC;
+        }
+    }
+
+    &.normal {
+        span {
+            color: #909090;
+        }
+    }
+
+    &.poison {
+        span {
+            color: #AC6ACA;
+        }
+    }
+
+    &.psychic {
+        span {
+            color: #EB8B85;
+        }
+    }
+
+    &.rock {
+        span {
+            color: #84BEB3;
+        }
+    }
+
+    &.grass {
+        span {
+            color: #73B861;
+        }
+    }
+
+    &.steal {
+        span {
+            color: #6594A1;
+        }
+    }
+
+    &.water {
+        span {
+            color: #4F77BE;
+        }
+    }
+
+    &.fire {
+        span {
+            color: #E96303;
+        }
+    }
+
+    &.flyin {
+        span {
+            color: #758CBD;
+        }
+    }
+
+}
+
+.card-pokemon {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;
+    background-color: #FFF;
+    border-radius: 1.2rem;
+    box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.30);
+    height: 30.4rem;
+    z-index: 1;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.30);
+    }
+
+    &.grass {
+        .image {
+            &::after {
+                background-color: rgba(114, 184, 97, 0.4);
+            }
+        }
+    }
+
+    &.ghost {
+        .image {
+            &::after {
+                background-color: rgba(97, 110, 183, 0.4);
+            }
+        }
+    }
+
+    &.bug {
+        .image {
+            &::after {
+                background-color: rgba(156, 186, 72, 0.4);
+            }
+        }
+
+    }
+
+    &.dark {
+        .image {
+            &::after {
+                background-color: rgba(89, 87, 97, 0.4);
+            }
+        }
+    }
+
+    &.drogon {
+        .image {
+            &::after {
+                background-color: rgba(44, 106, 193, 0.4);
+            }
+        }
+    }
+
+    &.eletric {
+        .image {
+            &::after {
+                background-color: rgba(212, 188, 52, 0.4);
+            }
+        }
+    }
+
+    &.fairy {
+        .image {
+            &::after {
+                background-color: rgba(226, 150, 225, 0.4);
+            }
+        }
+    }
+
+    &.fighting {
+        .image {
+            &::after {
+                background-color: rgba(196, 77, 97, 0.4);
+            }
+        }
+    }
+
+    &.ground {
+        .image {
+            &::after {
+                background-color: rgba(206, 127, 85, 0.4);
+            }
+        }
+    }
+
+    &.ice {
+        .image {
+            &::after {
+                background-color: rgba(113, 186, 171, 0.4);
+            }
+        }
+    }
+
+    &.normal {
+        .image {
+            &::after {
+                background-color: rgba(144, 144, 144, 0.4);
+            }
+        }
+    }
+
+    &.poison {
+        .image {
+            &::after {
+                background-color: rgba(172, 106, 202, 0.4);
+            }
+        }
+    }
+
+    &.psychic {
+        .image {
+            &::after {
+                background-color: rgba(235, 140, 133, 0.4);
+            }
+        }
+    }
+
+    &.rock {
+        .image {
+            &::after {
+                background-color: rgba(132, 190, 179, 0.4);
+            }
+        }
+    }
+
+    &.steal {
+        .image {
+            &::after {
+                background-color: rgba(101, 148, 161, 0.4);
+            }
+        }
+    }
+
+    &.water {
+        .image {
+            &::after {
+                background-color: rgba(79, 120, 190, 0.4);
+            }
+        }
+    }
+
+    &.fire {
+        .image {
+            &::after {
+                background-color: rgba(233, 99, 3, 0.4);
+            }
+        }
+    }
+
+    &.flyin {
+        .image {
+            &::after {
+                background-color: rgba(117, 140, 189, 0.4);
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        @include centerToralFlex;
+        margin: 0 auto;
+        margin-bottom: 1.4rem;
+
+        &::after {
+            content: "";
+            width: 16.5rem;
+            height: 16.5rem;
+            flex-shrink: 0;
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    }
+
+    .info {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0px 28px;
+
+        .text {
+
+            span {
+                color: #7A7D80;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+            }
+
+        }
+
+        .icon {
+            margin-bottom: 0.9rem;
+        }
+    }
+}
+
+.tag-type {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    padding: 0 2.5rem;
+    font-size: 1.3rem;
+    letter-spacing: -0.01px;
+    color: #9BBA48;
+    background-color: rgba(156, 186, 72, 0.10);
+
+    &.ghost {
+        color: #616EB7;
+        background-color: rgba(97, 110, 183, 0.1);
+    }
+
+    &.bug {
+        color: #9BBA48;
+        background-color: rgba(156, 186, 72, 0.1);
+
+    }
+
+    &.dark {
+        color: #595761;
+        background-color: rgba(89, 87, 97, 0.1);
+    }
+
+    &.drogon {
+        color: #2C6AC1;
+        background-color: rgba(44, 106, 193, 0.1);
+    }
+
+    &.eletric {
+        color: #D4BC34;
+        background-color: rgba(212, 188, 52, 0.1);
+    }
+
+    &.fairy {
+        color: #E296E1;
+        background-color: rgba(226, 150, 225, 0.1);
+    }
+
+    &.fighting {
+        color: #C44D61;
+        background-color: rgba(196, 77, 97, 0.1);
+    }
+
+    &.ground {
+        color: #CE8056;
+        background-color: rgba(206, 127, 85, 0.1);
+    }
+
+    &.ice {
+        color: #71BAAC;
+        background-color: rgba(113, 186, 171, 0.1);
+
+    }
+
+    &.normal {
+        color: #909090;
+        background-color: rgba(144, 144, 144, 0.1);
+
+    }
+
+    &.poison {
+        color: #AC6ACA;
+        background-color: rgba(172, 106, 202, 0.1);
+
+    }
+
+    &.psychic {
+        color: #EB8B85;
+        background-color: rgba(235, 140, 133, 0.1);
+
+    }
+
+    &.rock {
+        color: #84BEB3;
+        background-color: rgba(132, 190, 179, 0.1);
+
+    }
+
+    &.grass {
+        color: #73B861;
+        background-color: rgba(114, 184, 97, 0.1);
+
+    }
+
+    &.steal {
+        color: #6594A1;
+        background-color: rgba(101, 148, 161, 0.1);
+    }
+
+    &.water {
+        color: #4F77BE;
+        background-color: rgba(79, 120, 190, 0.1);
+    }
+
+    &.fire {
+        color: #E96303;
+        background-color: rgba(233, 99, 3, 0.1);
+    }
+
+    &.flyin {
+        color: #758CBD;
+        background-color: rgba(117, 140, 189, 0.1);
+    }
+}
+
+.btn-load-more {
+    display: inline-flex;
+    padding: 1.4rem 2rem;
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: 0.6rem;
+    background-color: rgba(63, 93, 179, 0.10);
+    color: #3F5DB3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.14px;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #3F5DB3;
+        color: #FFF;
+    }
+}
