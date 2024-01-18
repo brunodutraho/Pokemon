@@ -118,26 +118,26 @@
     &.ghost {
         span {
 
-            color: #616EB7;
+            color: var(--type-ghost);
         }
     }
 
     &.bug {
         span {
-            color: #9BBA48;
+            color: var(--type-bug);
         }
 
     }
 
     &.dark {
         span {
-            color: #595761;
+            color: var(--type-dark);
         }
     }
 
     &.drogon {
         span {
-            color: #2C6AC1;
+            color: var(--type-dragon);
         }
     }
 
@@ -440,27 +440,27 @@
     padding: 0 2.5rem;
     font-size: 1.3rem;
     letter-spacing: -0.01px;
-    color: #9BBA48;
+    color: var(--type-bug);
     background-color: rgba(156, 186, 72, 0.10);
 
     &.ghost {
-        color: #616EB7;
+        color: var(--type-ghost);
         background-color: rgba(97, 110, 183, 0.1);
     }
 
     &.bug {
-        color: #9BBA48;
+        color: var(--type-bug);
         background-color: rgba(156, 186, 72, 0.1);
 
     }
 
     &.dark {
-        color: #595761;
+        color: var(--type-dark);
         background-color: rgba(89, 87, 97, 0.1);
     }
 
     &.drogon {
-        color: #2C6AC1;
+        color: var(--type-dragon);
         background-color: rgba(44, 106, 193, 0.1);
     }
 
