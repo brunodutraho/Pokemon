@@ -141,7 +141,7 @@
         }
     }
 
-    &.eletric {
+    &.electric {
         span {
             color: var(--type-eletric);
         }
@@ -284,7 +284,7 @@
         }
     }
 
-    &.eletric {
+    &.electric {
         .image {
             &::after {
                 background-color: rgba(212, 188, 52, 0.4);
@@ -464,7 +464,7 @@
         background-color: rgba(44, 106, 193, 0.1);
     }
 
-    &.eletric {
+    &.electric {
         color: var(--type-eletric);
         background-color: rgba(212, 188, 52, 0.1);
     }
@@ -605,10 +605,10 @@
         }
     }
 
-    &[type-pokemon-modal="eletric"] {
+    &[type-pokemon-modal="electric"] {
         .box {
             .left-container {
-                background-image: url("../img/bg-types/eletric.svg");
+                background-image: url("../img/bg-types/electric.svg");
             }
         }
     }
