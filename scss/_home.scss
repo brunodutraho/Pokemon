@@ -1,0 +1,157 @@
+.s-area-slide-hero {
+    position: relative;
+    width: 100%;
+    height: 99.4rem;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .swiper-slide {
+
+            &.blue {
+                .main-area {
+                    display: flex;
+                    background: url("../img/bg-blue.svg") no-repeat center center;
+                    background-size: cover;
+
+                    .text {
+                        .image {
+                            .pokeball {
+                                position: relative;
+                                top: -6.5rem;
+                                left: 1.3rem;
+                            }
+                        }
+                    }
+
+                    .area-explore {
+                        .txt {
+                            .icon {
+                                background-color: rgba(175, 192, 227, 0.3);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 28.8rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: #EFF3F6;
+                z-index: 0;
+                pointer-events: none;
+            }
+
+            .main-area {
+                position: relative;
+                background: url("../img/bg-red.svg") no-repeat center center;
+                background-size: cover;
+                width: 100%;
+                height: 70.6rem;
+                padding-top: 13.3rem;
+                
+
+                .container {
+                    position: relative;
+                    height: 100%;
+                }
+
+                .text {
+                    text-align: center;
+
+                    .tag {
+                        margin: 0 auto;
+                    }
+
+                    h1 {
+                        margin-top: 2.9rem;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    p {
+                        color: #FFF;
+                        font-family: 'Inter', sans-serif;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        line-height: 150%;
+                    }
+
+                    .image {
+                        position: relative;
+                        z-index: 1;
+                        width: 100%;
+                        max-width: 79.8rem;
+                        margin: 0 auto;
+                        margin-top: 14.2rem;
+
+                        .lights {
+                            position: absolute;
+                            top: -6.5rem;
+                            left: 50%;
+                            margin-left: -8.5rem;
+                        }
+                    }
+                }
+
+                .area-explore {
+                    position: absolute;
+                    bottom: 8rem;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+
+                    .txt {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        transform: rotate(-90deg);
+                        top: -3.9rem;
+                        left: -2.3rem;
+
+                        .icon {
+                            width: 4rem;
+                            height: 4rem;
+                            background-color: #C90C0C;
+                            border-radius: 50%;
+                            @include centerTotalFlex;
+                            transform: rotate(90deg);
+
+                        }
+
+                        span {
+                            color: #FFF;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                            line-height: 150%;
+                            margin-left: 3rem;
+                        }
+                    }
+
+                    .swiper-pagination {
+                        position: relative;
+                        width: 100%;
+                        max-width: 100px;
+                        .swiper-pagination-bullet {
+                            width: 0.7rem;
+                            height: 0.7rem;
+                            background-color: #ffffff;
+                            &:not(:first-child) {
+                                margin-left: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
