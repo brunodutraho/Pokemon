@@ -32,7 +32,7 @@
                                 background-color: rgba(175, 192, 227, 0.3);
                             }
                         }
-                        
+
                     }
                 }
             }
@@ -56,7 +56,7 @@
                 width: 100%;
                 height: 70.6rem;
                 padding-top: 13.3rem;
-                
+
 
                 .container {
                     position: relative;
@@ -141,16 +141,99 @@
                         position: relative;
                         width: 100%;
                         max-width: 100px;
+
                         .swiper-pagination-bullet {
                             width: 0.7rem;
                             height: 0.7rem;
                             background-color: #ffffff;
+
                             &:not(:first-child) {
                                 margin-left: 0.8rem;
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.s-all-info-pokemons {
+    position: relative;
+    padding-top: 11.9rem;
+    margin-top: -288px;
+    z-index: 2;
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16.2rem;
+
+        h2 {
+            max-width: 26.5rem;
+        }
+    }
+
+    .area-all {
+        display: flex;
+
+        .left-container {
+            width: 100%;
+            max-width: 23.9rem;
+            border-right: 1px solid #EFF3F6;
+
+            ul {
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 4rem;
+                    }
+                }
+            }
+        }
+
+        .right-container {
+            padding-bottom: 7.5rem;
+            padding-left: 7.5rem;
+            width: 100%;
+
+            .top-container {
+
+                margin-bottom: 6.3rem;
+
+                div {
+                    display: flex;
+
+                    img {
+                        width: 100%;
+                        max-width: 3.2rem;
+                        height: 3.2rem;
+                        margin-right: 1rem;
+                    }
+
+                    span {
+                        font-family: 'Montserrat', sans-serif;
+                        color: #4D5053;
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        line-height: 150%;
+                    }
+                }
+
+
+            }
+
+            .all-pokemons {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 3.2rem;
+                margin-bottom: 6.8rem;
+            }
+
+            .btn-load-more {
+                display: table;
+                margin: 0 auto;
             }
         }
     }

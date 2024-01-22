@@ -101,6 +101,11 @@
         filter: grayscale(0);
     }
 
+    &.active {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+
     .icon {
         width: 2.8rem;
         height: 2.8rem;
@@ -113,6 +118,13 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 150%;
+    }
+
+    &.all {
+        span {
+
+            color: var(--type-all);
+        }
     }
 
     &.ghost {
