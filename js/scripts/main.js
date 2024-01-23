@@ -4,7 +4,10 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
     },
-    
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
   });
 
 
@@ -27,5 +30,15 @@ cardPokemon.forEach(card => {
 
 closePokemon.addEventListener('click', closeDetailsPokemon);
 closeOverlay.addEventListener('click', closeDetailsPokemon);
+
+//Filtro mobile seclect custom
+
+const btnCustomSelect = document.querySelector('.js-open-select-custom')
+
+btnCustomSelect.addEventListener('click', () => {
+    btnCustomSelect.parentElement.classList.toggle('active')
+})
+
+
 
 
