@@ -22,4 +22,20 @@ footer {
             }
         }
     }
+
+    @media(max-width: 560px) {
+        padding: 4rem 0rem;
+        .container {
+            flex-direction: column;
+            .text {
+                margin-bottom: 4.8rem;
+                h3 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

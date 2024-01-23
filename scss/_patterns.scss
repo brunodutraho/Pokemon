@@ -588,6 +588,7 @@
     opacity: 0;
     pointer-events: none;
     transition: all .3s;
+    
 
     &[type-pokemon-modal="grass"] {
         .box {
@@ -985,13 +986,193 @@
         }
     }
 
+    @media(max-width: 768px) {
+        align-items: flex-end;
+        
+
+        .box {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            max-height: 70rem;
+            border-radius: 2rem 2rem 0rem 0rem;
+
+            .close {
+                top: 0.6rem;
+                right: 0.6rem;
+                z-index: 1;
+            }
+
+            .left-container {
+                max-width: 100%;
+                height: 12.5rem;
+                background-size: cover;
+                border-radius: 2rem 2rem 0rem 0rem;
+
+                .icon {
+                    top: 3rem;
+                    right: 6rem;
+                }
+
+                .image {
+                    max-width: 12rem;
+                    height: 12rem;
+                    top: 2.5rem;
+                    left: 50%;
+                    margin-left: -6rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .right-container {
+                padding: 0rem 2.4rem 1.5rem 2.4rem;
+
+                .name {
+                    position: relative;
+                    top: 3.8rem;
+                    justify-content: center;
+                }
+
+                .type {
+                    position: relative;
+                    top: 3.8rem;
+                    justify-content: center;
+                }
+
+                .info {
+                    position: relative;
+                    top: 3.2rem;
+                    justify-content: center;
+                }
+                .weak {
+                    position: relative;
+                    top: 3.2rem;
+
+                    h4 {
+                        text-align: center;
+                    }
+
+                    ul {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-gap: 1rem;
+                        li {
+                            margin-bottom: 1rem;
+                            &:not(:first-child) {
+                                margin-left: 0;
+                            }
+
+                            .tag-type {
+                                width: 100%;
+                                align-items: center;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .stats {
+                    .all-stats {
+                        .item {
+                            .bar-status {
+                                max-width: 75%;
+
+                                .separator {
+                                    li {
+                                        &:not(:first-child) {
+                                            margin-left: 19%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 560px) {
+        .box {
+            height: 100%;
+
+            .close {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .left-container {
+                max-width: 100%;
+                height: 12.5rem;
+                background-size: cover;
+                border-radius: 2rem 2rem 0rem 0rem;
+
+                .icon {
+                    max-width: 2rem;
+                    height: 2rem;
+                    top: 1rem;
+                    right: 6rem;
+                    img {
+                        width: 1.5rem;
+                    height: 1.5rem;
+                    }
+                }
+
+                .image {
+                    max-width: 8rem;
+                    height: 8rem;
+                    top: 0.5rem;
+                    left: 50%;
+                    margin-left: -6rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .right-container {
+                .name {
+                    position: relative;
+                    top: 5rem;
+                }
+
+                .type {
+                    position: relative;
+                    top: 4.8rem;
+                    justify-content: center;
+                }
+
+                .stats {
+                    .all-stats {
+                        .item {
+                            .bar-status {
+                                max-width: 75%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
 
 }
 
 .open-modal {
+    overflow: hidden;
     .modal {
         opacity: 1;
         pointer-events: all;
+
         .box {
             transform: translateY(0);
         }
