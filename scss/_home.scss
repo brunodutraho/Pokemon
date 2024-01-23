@@ -21,7 +21,7 @@
                             .pokeball {
                                 position: relative;
                                 top: -6.5rem;
-                                left: 1.3rem;
+                                left: 21rem;
                             }
                         }
                     }
@@ -97,6 +97,12 @@
                             left: 50%;
                             margin-left: -8.5rem;
                         }
+
+                        .pokeball {
+                            position: relative;
+                            top: -0.5rem;
+                            left: 20.7rem;
+                        }
                     }
                 }
 
@@ -156,13 +162,149 @@
             }
         }
     }
+
+    //Ipad mini
+    @media(max-width: 768px) {
+        .swiper {
+            .swiper-slide {
+                &.blue {
+                    .main-area {
+                        .text {
+
+                            h1 {
+                                width: 100%;
+                                max-width: 29.4rem;
+                                margin: 0 auto;
+                                margin-top: 2.9rem;
+                                margin-bottom: 0.9rem;
+                            }
+
+                            .image {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .pokeball {
+                                    left: initial;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .main-area {
+                    .text {
+
+                        .image {
+                            display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            margin-top: 10rem;
+
+                            .pokeball {
+                                left: initial;
+                                top: -0.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //mobile
+   @media(max-width: 560px) {
+
+        .swiper {
+            .swiper-slide {
+                &.blue {
+                    .main-area {
+                        .text {
+
+                            h1 {
+                                width: 100%;
+                                max-width: 25.4rem;
+                                margin: 0 auto;
+                                margin-top: 2.9rem;
+                                margin-bottom: 0.9rem;
+                            }
+
+                            .image {
+                                .pokeball {
+                                    left: 0.2rem;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .main-area {
+                    .text {
+                        h1 {
+                            width: 100%;
+                            max-width: 32.7rem;
+                            margin: 0 auto;
+                            margin-top: 2.9rem;
+                            margin-bottom: 0.9rem;
+                        }
+
+                        .image {
+                            margin-top: 10rem;
+
+                            .pokeball {
+                                left: 0rem;
+                                top: -0.9rem;
+                            }
+                        }
+                    }
+
+                    .area-explore {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media(max-width: 280px) {
+        .swiper {
+            .swiper-slide {
+                &.blue {
+                    .main-area {
+                        .text {
+                            .image {
+                                .lights {
+                                    top: -1.8rem;
+                                }
+
+                                .pokeball {
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
+
+
+
+
+
+
 
 .s-all-info-pokemons {
     position: relative;
     padding-top: 11.9rem;
     margin-top: -288px;
     z-index: 2;
+    display: none;
 
     .top {
         display: flex;

@@ -19,4 +19,25 @@ header {
         line-height: 1.6;
         font-size: 1.3rem;
     }
+
+    @media(max-width: 560px) {
+        height: 8.2rem;
+        a {
+            img {
+                width: 12.9rem;
+                height: 4.77rem;
+            }
+        }
+    }
+
+    @media(max-width: 300px) {
+        .container {
+            .logo {
+                margin: 0 auto;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
 }

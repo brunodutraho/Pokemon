@@ -11,6 +11,13 @@ h1 {
     color: #FFFFFF;
     font-size: 6.4rem;
     letter-spacing: -0.64px;
+
+    @media(max-width: 560px) {
+        font-size: 4.8rem;
+    }
+    @media(max-width: 280px) {
+        font-size: 3.2rem;
+    }
 }
 
 h2 {
