@@ -406,6 +406,7 @@
             width: 100%;
             max-width: 23.9rem;
             border-right: 1px solid #EFF3F6;
+            margin-bottom: 10rem;
 
             ul {
 
@@ -505,7 +506,7 @@
         }
     }
 
-    @media(max-width: 560px) {
+    @media(max-width: 670px) {
         margin-top: -27rem;
 
         .top {

@@ -33,7 +33,7 @@
                         <div class="container">
 
                             <div class="text">
-                                <div class="tag">
+                                <div class="tag" >
                                     <div class="icon">
                                         <img src="img/bag-red.svg" alt="Mochila vermelha" title="Mochila vermelha">
                                     </div>
@@ -117,81 +117,26 @@
                 </button>
                 <ul class="dropdown-select">
                     <li>
-                        <button class="type-filter fire active">
+                        <button class="type-filter all" code-type="">
                             <div class="icon">
-                                <img src="img/icon-types/fire.svg" alt="Icon fire" title="Fire"> 
+                                <img src="img/icon-all.svg" alt="Icon All" title="All"> 
                             </div>
                             <span>All</span>
                         </button>
                     </li>
-                    <li>
-                        <button class="type-filter ghost">
-                            <div class="icon">
-                                <img src="img/icon-types/ghost.svg" alt="Icon ghost" title="Ghost">
-                            </div>
-                            <span>Ghost</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-filter grass">
-                            <div class="icon">
-                                <img src="img/icon-types/grass.svg" alt="Icon plants" title="Plants">
-                            </div>
-                            <span>Grass</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-filter ground">
-                            <div class="icon">
-                                <img src="img/icon-types/ground.svg" alt="Icon plants" title="Plants">
-                            </div>
-                            <span>Ground</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-filter water">
-                            <div class="icon">
-                                <img src="img/icon-types/water.svg" alt="Icon plants" title="Plants">
-                            </div>
-                            <span>Water</span>
-                        </button>
-                    </li>
+                    
                 </ul>
             </div>
 
             <div class="area-all">
                 <div class="left-container">
-                    <ul>
+                    <ul id="js-type-area">
                         <li>
-                            <button class="type-filter all active">
+                            <button class="type-filter all" code-type="">
                                 <div class="icon">
-                                    <img src="img/icon-all.svg" alt="Icon todos" title="Todos">
+                                     <img src="img/icon-all.svg" alt="Icon todos" title="Todos">
                                 </div>
                                 <span>All</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="type-filter fire">
-                                <div class="icon">
-                                    <img src="img/icon-types/fire.svg" alt="Icon fire" title="Fire">
-                                </div>
-                                <span>Fire</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="type-filter ghost">
-                                <div class="icon">
-                                    <img src="img/icon-types/ghost.svg" alt="Icon ghost" title="Ghost">
-                                </div>
-                                <span>Ghost</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="type-filter grass">
-                                <div class="icon">
-                                    <img src="img/icon-types/grass.svg" alt="Icon plants" title="Plants">
-                                </div>
-                                <span>Grass</span>
                             </button>
                         </li>
                     </ul>
@@ -210,7 +155,7 @@
                         
                         
                     </div>
-                    <button class="btn-load-more">
+                    <button class="btn-load-more" id="js-btn-load-more">
                         Load more Pokémons
                     </button>
                 </div>
@@ -382,6 +327,7 @@
         </div>
     </footer>
 
+    
     <script src="js/plugins.js"></script>
     <script src="js/all.js"></script>
 </body>
