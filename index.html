@@ -103,8 +103,8 @@
             <div class="top">
                 <h2>Select your Pokémon</h2>
                 <div class="search">
-                    <input type="text" placeholder="Search name or code">
-                    <button type="button">
+                    <input type="text" id="js-input-search" placeholder="Search name or code">
+                    <button id="js-btn-search" type="button">
                         <img src="img/icon-search.svg" alt="">
                     </button>
                 </div>
@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <div class="modal" type-pokemon-modal="grass">
+    <div class="modal" type-pokemon-modal="grass" id="js-type-pokemon-modal-details">
         <div class="overlay js-overlay-modal-details-pokemon"></div>
         <div class="box">
             <button class="close js-close-modal-details-pokemon">
@@ -175,7 +175,7 @@
                     <img src="img/icon-types/grass.svg" alt="">
                 </div>
                 <div class="image">
-                    <img src="img/bulbasaur.svg" alt="">
+                    <img src="" alt="" id="js-image-pokemon-modal">
                 </div>
             </div>
 
