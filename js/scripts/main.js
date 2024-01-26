@@ -135,26 +135,71 @@ function openDetailsPokemon() {
     
     let codePokemon = this.getAttribute('code-pokemon');
     let imagemPokemon = this.querySelector('.thumb-img');
-    const modalDetails = document.getElementById('js-type-pokemon-modal-details')
+    let iconTypePokemon = this.querySelector('.info .icon img');
+    let namePokemon = this.querySelector('.info h3').textContent;
+    let codeStringPokemon = this.querySelector('.info span').textContent;
 
-    const imgPokemonModal = document.getElementById('js-image-pokemon-modal')
+
+    let iconTypeModal = document.getElementById('js-type-pokemon-modal')
+    const modalDetails = document.getElementById('js-type-pokemon-modal-details');
+    const imgPokemonModal = document.getElementById('js-image-pokemon-modal');
+    const namePokemonModal = document.getElementById('js-name-pokemon-modal');
+    const codePokemonModal = document.getElementById('js-code-pokemon-modal');
+    const heightPokemonModal = document.getElementById('js-height-pokemon');
+    const weightPokemonModal = document.getElementById('js-weight-pokemon');
+    const abilitiePokemonModal = document.getElementById('js-main-abilities');
+
+
     imgPokemonModal.setAttribute('src', imagemPokemon.getAttribute('src'));
     modalDetails.setAttribute('type-pokemon-modal', this.classList[2]);
+    iconTypeModal.setAttribute('src', iconTypePokemon.getAttribute('src'));
+    
+    namePokemonModal.textContent = namePokemon;
+    codePokemonModal.textContent = codeStringPokemon;
     
 
-    
-
-
-
-    /*
     axios({
         method: 'GET',
         url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}`
     })
     .then(response => {
-        
+        let data = response.data;
+
+        let infoPokemon = {
+            mainAbilities : primeiraLetraMaiuscula(data.abilities[0].ability.name),
+            types : data.types,
+            weight : data.weight,
+            height : data.height,
+            abilities : data.abilities,
+            stats : data.stats,
+            urlType : data.types[0].type.url
+        }
+
+        function listingTypesPokemon() {
+            const areaTypesModal = document.getElementById('js-type');
+            areaTypesModal.innerHTML = "";
+
+            let arrayTypes = infoPokemon.types;
+
+            arrayTypes.forEach(itemType => {
+                let itemList = document.createElement('li');
+                areaTypesModal.appendChild(itemList);
+                
+                let spanList = document.createElement('span');
+                spanList.classList = `tag-type ${itemType.type.name}`;
+                spanList.textContent = primeiraLetraMaiuscula(itemType.type.name);
+                itemList.appendChild(spanList);
+            })
+            
+        }
+
+        heightPokemonModal.textContent = `${infoPokemon.height / 10}m`;
+        weightPokemonModal.textContent = `${infoPokemon.weight / 10}kg`;
+        abilitiePokemonModal.textContent = infoPokemon.mainAbilities;
+
+        listingTypesPokemon()
     })
-     */
+    
 }
 
 function closeDetailsPokemon() {
