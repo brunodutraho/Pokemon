@@ -809,6 +809,7 @@
         }
 
         .right-container {
+            width: 100%;
             padding: 3.5rem 7.2rem 2.9rem 7.4rem;
 
             .name {
@@ -844,7 +845,7 @@
                 align-items: center;
                 flex-wrap: wrap;
                 width: 100%;
-                margin-bottom: 3.2rem;
+                margin-bottom: 2.2rem;
 
                 li {
                     &:not(:first-child) {
@@ -856,7 +857,7 @@
             .info {
                 display: flex;
                 align-items: center;
-                padding-bottom: 3.2rem;
+                padding-bottom: 2rem;
 
                 li {
                     &:not(:first-child) {
@@ -889,7 +890,8 @@
             }
 
             .weak {
-                margin-bottom: 3.2rem;
+                position: relative;
+                margin-bottom: 1.2rem;
 
                 h4 {
                     color: #4D5053;
@@ -902,14 +904,20 @@
                 }
 
                 ul {
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-                    flex-wrap: wrap;
+                    display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-gap: 1rem;
 
                     li {
+                        margin-bottom: 0.5rem;
                         &:not(:first-child) {
-                            margin-left: 1rem;
+                            margin-left: 0;
+                        }
+
+                        .tag-type {
+                            width: 100%;
+                            align-items: center;
+                            text-align: center;
                         }
                     }
                 }
@@ -1033,7 +1041,10 @@
             }
 
             .right-container {
+                
                 padding: 0rem 2.4rem 1.5rem 2.4rem;
+                
+                
 
                 .name {
                     position: relative;
@@ -1045,6 +1056,7 @@
                     position: relative;
                     top: 3.8rem;
                     justify-content: center;
+                    margin-bottom: 3.2rem;
                 }
 
                 .info {
@@ -1055,28 +1067,13 @@
                 .weak {
                     position: relative;
                     top: 3.2rem;
+                    margin-bottom: 4.2rem;
 
                     h4 {
                         text-align: center;
                     }
 
-                    ul {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        grid-gap: 1rem;
-                        li {
-                            margin-bottom: 1rem;
-                            &:not(:first-child) {
-                                margin-left: 0;
-                            }
-
-                            .tag-type {
-                                width: 100%;
-                                align-items: center;
-                                text-align: center;
-                            }
-                        }
-                    }
+                    
                 }
 
                 .stats {

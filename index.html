@@ -7,6 +7,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+        <link rel="shortcut icon" href="favicon-pokeball.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/plugins.css">
@@ -204,21 +205,12 @@
                     </li>
                 </ul>
 
-                <div class="weak">
+                <div class="weak" >
                     <h4>Weaknesses</h4>
 
-                    <ul>
+                    <ul id="js-weak">
                         <li>
                             <span class="tag-type fire">Fire</span>
-                        </li>
-                        <li>
-                            <span class="tag-type psychic">Psychic</span>
-                        </li>
-                        <li>
-                            <span class="tag-type flying">Flying</span>
-                        </li>
-                        <li>
-                            <span class="tag-type ice">Ice</span>
                         </li>
                     </ul>
                 </div>
@@ -230,7 +222,7 @@
                         <div class="item">
                             <span>HP</span>
                             <div class="bar-status">
-                                <div class="bar"></div>
+                                <div class="bar" id="js-status-hp"></div>
                                 <ul class="separator">
                                     <li></li>
                                     <li></li>
@@ -242,7 +234,7 @@
                         <div class="item">
                             <span>Attack</span>
                             <div class="bar-status">
-                                <div class="bar"></div>
+                                <div class="bar" id="js-status-attack"></div>
                                     <ul class="separator">
                                         <li></li>
                                         <li></li>
@@ -255,7 +247,7 @@
                         <div class="item">
                             <span>Defense</span>
                             <div class="bar-status">
-                                <div class="bar"></div>
+                                <div class="bar" id="js-status-defense"></div>
                                     <ul class="separator">
                                         <li></li>
                                         <li></li>
@@ -268,7 +260,7 @@
                         <div class="item">
                             <span>Sp. attack</span>
                             <div class="bar-status">
-                                <div class="bar"></div>
+                                <div class="bar" id="js-status-sp-attack"></div>
                                     <ul class="separator">
                                         <li></li>
                                         <li></li>
@@ -281,7 +273,7 @@
                         <div class="item">
                             <span>Sp. defense</span>
                             <div class="bar-status">
-                                <div class="bar"></div>
+                                <div class="bar" id="js-status-sp-defense"></div>
                                     <ul class="separator">
                                         <li></li>
                                         <li></li>
@@ -294,7 +286,7 @@
                         <div class="item">
                             <span>Speed</span>
                             <div class="bar-status">
-                                <div class="bar"></div>
+                                <div class="bar" id="js-status-speed"></div>
                                     <ul class="separator">
                                         <li></li>
                                         <li></li>

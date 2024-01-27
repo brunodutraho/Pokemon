@@ -193,11 +193,53 @@ function openDetailsPokemon() {
             
         }
 
+        function listingWeaknesses() {
+            const areaWeak = document.getElementById('js-weak');
+
+            areaWeak.innerHTML = "";
+
+            axios({
+                method: 'GET',
+                url: `${infoPokemon.urlType}`
+            })
+            .then(response => {
+                let weaknesses = response.data.damage_relations.
+                double_damage_from;
+
+                weaknesses.forEach(itemTypeWeak => {
+                    let itemListWeak = document.createElement('li');
+                    areaWeak.appendChild(itemListWeak);
+                    
+                    let spanListWeak = document.createElement('span');
+                    spanListWeak.classList = `tag-type ${itemTypeWeak.name}`;
+                    spanListWeak.textContent = primeiraLetraMaiuscula(itemTypeWeak.name);
+                    itemListWeak.appendChild(spanListWeak);
+                })
+                
+            })
+        }
+
         heightPokemonModal.textContent = `${infoPokemon.height / 10}m`;
         weightPokemonModal.textContent = `${infoPokemon.weight / 10}kg`;
         abilitiePokemonModal.textContent = infoPokemon.mainAbilities;
 
+        const statsHp =  document.getElementById('js-status-hp');
+        const statsAttack =  document.getElementById('js-status-attack');
+        const statsDefense =  document.getElementById('js-status-defense');
+        const statsSpAttack =  document.getElementById('js-status-sp-attack');
+        const statsSpDefense =  document.getElementById('js-status-sp-defense');
+        const statsSpeed =  document.getElementById('js-status-speed');
+
+        statsHp.style.width = `${infoPokemon.stats[0].base_stat}%`;
+        statsAttack.style.width = `${infoPokemon.stats[1].base_stat}%`;
+        statsDefense.width = `${infoPokemon.stats[2].base_stat}%`;
+        statsSpAttack.style.width = `${infoPokemon.stats[3].base_stat}%`;
+        statsSpDefense.style.width = `${infoPokemon.stats[4].base_stat}%`;
+        statsSpeed.style.width = `${infoPokemon.stats[5].base_stat}%`;
+
+
         listingTypesPokemon()
+        listingWeaknesses()
     })
     
 }
