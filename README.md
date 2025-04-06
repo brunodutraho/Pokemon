@@ -7,7 +7,6 @@
 
 <p>
   <a href="https://brunodutraho.github.io/Pokemon/" target="_blank">
-    <img src="img/screenshot.png" alt="Screenshot do Projeto Pokémon" title="Acesse o Projeto Pokémon">
   </a>
 </p>
 
@@ -18,6 +17,15 @@
   <li>Busca por nome ou código do Pokémon.</li>
   <li>Filtragem por tipos de Pokémon.</li>
   <li>Exibição de detalhes como habilidades, fraquezas e estatísticas.</li>
+</ul>
+
+<h2>Tecnologias Utilizadas</h2>
+<ul>
+  <li><strong>HTML5</strong>: Estruturação semântica do conteúdo.</li>
+  <li><strong>CSS3</strong>: Estilização e design responsivo.</li>
+  <li><strong>JavaScript (ES6+)</strong>: Lógica de programação e manipulação da DOM.</li>
+  <li><strong>Fetch API</strong>: Consumo de dados da <a href="https://pokeapi.co/" target="_blank">PokeAPI</a>.</li>
+  <li><strong>Git e GitHub</strong>: Controle de versão e hospedagem do projeto.</li>
 </ul>
 
 <h2>Como acessar</h2>
@@ -37,6 +45,6 @@
 </p>
 <p>
   <a href="https://brunodutraho.github.io/Pokemon/" target="_blank">
-    <img src="img/screenshot.png" alt="Screenshot do Projeto Pokémon" title="Acesse o Projeto Pokémon">
+    <img src="https://i.postimg.cc/N02yR8VC/pokemon.png" alt="Screenshot do Projeto Pokémon" title="Acesse o Projeto Pokémon">
   </a>
 </p>
